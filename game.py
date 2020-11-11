@@ -44,7 +44,7 @@ score = 0
 for i in range(num_questions):
     question_index = random.randint(0,len(question_list)-1)
     userAnswer = input(question_list[question_index] + "\n")
-    if userAnswer.lower() == answer_list[question_index].lower():
+    if userAnswer.lower().__contains__(answer_list[question_index].lower()):
         print("correct!\n")
         score += 1
     else:
